@@ -1,5 +1,6 @@
 require 'pry'
 
+<<<<<<< HEAD
 holiday_hash =  {
    :winter => {
      :christmas => ["Lights", "Wreath"],
@@ -15,6 +16,23 @@ holiday_hash =  {
      :memorial_day => ["BBQ"]
    }
  }
+=======
+# holiday_hash =  {
+# #   :winter => {
+# #     :christmas => ["Lights", "Wreath"],
+# #     :new_years => ["Party Hats"]
+# #   },
+# #   :summer => {
+# #     :fourth_of_july => ["Fireworks", "BBQ"]
+# #   },
+# #   :fall => {
+# #     :thanksgiving => ["Turkey"]
+# #   },
+# #   :spring => {
+# #     :memorial_day => ["BBQ"]
+# #   }
+# # }
+>>>>>>> f820c50f58ed5561d6e0840578040f1784b5a2ec
 
 def second_supply_for_fourth_of_july(holiday_hash) #returns the second element in the 4th of July array
   holiday_hash[:summer][:fourth_of_july][1]
@@ -58,6 +76,7 @@ def all_supplies_in_holidays(holiday_hash) #expect this to return the hash and i
 end
 
 def all_holidays_with_bbq(holiday_hash) #returns an array of holiday names (as symbols) where "BBQ" is included as an attribute
+<<<<<<< HEAD
   bbq_holidays = []
   holiday_hash.each do |season, holidays|
     holidays.each do |holiday_name, attributes|
@@ -67,4 +86,20 @@ def all_holidays_with_bbq(holiday_hash) #returns an array of holiday names (as s
     end
   end
   bbq_holidays
+=======
+  # bbq_holidays = []
+  # holiday_hash.each do |season, holidays|
+  #   holidays.each do |holiday_name, attributes|
+  #     if attributes.flatten.include?("BBQ")
+  #       bbq_holidays << holiday_name
+  #     end
+  #   end
+  # end
+  # bbq_holidays
+  holiday_hash.collect do |season, holidays|
+    holidays.collect do |holiday_name, attributes|
+      "#{attributes.flatten.include?("BBQ") ? holiday_name : holiday_name.to_s.delete}"
+      end
+   end
+>>>>>>> f820c50f58ed5561d6e0840578040f1784b5a2ec
 end
