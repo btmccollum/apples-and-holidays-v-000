@@ -96,10 +96,10 @@ def all_holidays_with_bbq(holiday_hash) #returns an array of holiday names (as s
   #   end
   # end
   # bbq_holidays
-  holiday_hash.collect do |season, holidays|
-    holidays.collect do |holiday_name, attributes|
-      "#{attributes.flatten.include?("BBQ") ? holiday_name : holiday_name.to_s.delete}"
-      end
-   end
+  # holiday_hash.collect do |season, holidays|
+  #   holidays.collect do |holiday_name, attributes|
+  #     "#{attributes.flatten.include?("BBQ") ? holiday_name : holiday_name.to_s.delete}"
+  #     end
+  #  end
 # >>>>>>> f820c50f58ed5561d6e0840578040f1784b5a2ec
 end
