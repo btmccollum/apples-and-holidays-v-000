@@ -86,7 +86,7 @@ def all_holidays_with_bbq(holiday_hash) #returns an array of holiday names (as s
     end
   end
   bbq_holidays
-=======
+# =======
   # bbq_holidays = []
   # holiday_hash.each do |season, holidays|
   #   holidays.each do |holiday_name, attributes|
